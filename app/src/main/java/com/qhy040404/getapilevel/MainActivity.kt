@@ -17,11 +17,11 @@ class MainActivity : AppCompatActivity() {
         Thread(get()).start()
     }
 
-    private inner class get:Runnable {
+    private inner class get : Runnable {
         override fun run() {
             Looper.prepare()
 
-            val textView:TextView = findViewById(R.id.ApiTextView)
+            val textView: TextView = findViewById(R.id.ApiTextView)
             textView.text = android.os.Build.VERSION.SDK_INT.toString()
         }
     }
